@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="project1.css">
+    <script defer src="project1.js"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="search-box">
+            <input type="text" id="city" placeholder="Enter city name...">
+            <button id="searchBtn">Search</button>
+        </div>
+        <div class="weather-info">
+            <h2 class="id cityName"></h2>
+            <p id="temparature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+        </div>
+    </div>
 </body>
 </html>
