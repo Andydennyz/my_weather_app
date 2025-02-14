@@ -1,76 +1,69 @@
-/* container styling*/
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
+
 body {
-    background: linear-gradient(to right,  #4facfe, #00f2fe);
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    text-align: center;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
+
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.2);
     padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 400px
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/*Search bar styling*/
-.search-box {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px
-}
-.search-box input {
-    padding: 10px;
-    width: 70%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-}
-.search-box button {
-    padding: 10px;
-    background: #4facfe;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.search-box button:hover {
-    background: #00c6fb;
-}
-
-/*Weather info styling*/
-.weather-info {
-    background: rgba(0, 0, 0, 0.05);
-    padding: 15px;
-    border-radius: 15px;
-}
-.weather-info h2 {
+h1 {
     font-size: 24px;
     margin-bottom: 10px;
 }
-.weather-info p {
-    font-size: 18px;
-    margin-bottom: 10px;
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-/*Animations*/
-.weather-info {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5ease;
+input {
+    width: 70%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
 }
-.weather-info.show {
-    opacity: 1;
-    transform: translateY(0);
+
+button {
+    padding: 8px 15px;
+    border: none;
+    background: #ffcc00;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.weather-info {
+    margin-top: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

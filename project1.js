@@ -1,4 +1,4 @@
-const apiKey = "de17941bb4946b7ebd9e6cf3ff71a259";
+const apiKey = "de17941bb4946b7ebd9e6cf3ff71a259"; // Replace with your OpenWeather API key
 const searchBtn = document.getElementById("searchBtn");
 const cityInput = document.getElementById("city");
 
@@ -32,4 +32,3 @@ function updateUI(data) {
     document.getElementById("description").textContent = `Weather: ${data.weather[0].description}`;
     document.getElementById("humidity").textContent = `Humidity: ${data.main.humidity}%`;
 }
-
