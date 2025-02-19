@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="project1.css">
 </head>
 <body>
+    <nav>
+        <ul>
+          <li><a href="#" onclick="showHome()" class="filter">Home</a></li>
+          <li><a href="#" onclick="searchWeather()" class="filter">Search</a></li>
+          <li><a href="#" onclick="getCurrentLocationWeather()" class="filter">My Location</a></li>
+          <li><a href="#" onclick="showForecast()" class="filter">Forecast</a></li>
+          <li><a href="#" onclick="showConverter()" class="filter">Converter</a></li>
+        </ul>
+      </nav>
+      
+
 
     <!-- Video Background -->
     <video id="background-video" autoplay muted loop>
@@ -15,7 +26,7 @@
     </video>
 
     <div class="container">
-        <h1>Weather App</h1>
+        <h1  data-text="Weather App" class="box" id="filter">Weather App</h1>
         <div class="search">
             <input type="text" id="city" placeholder="Enter city name">
             <button id="searchBtn">Search</button>
