@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="project1.css">
-    <script defer src="project1.js"></script>
 </head>
 <body>
+
+    <!-- Video Background -->
+    <video id="background-video" autoplay muted loop>
+        <source id="video-source" src="default.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <div class="container">
         <h1>Weather App</h1>
-        <div class="search-box">
-            <input type="text" id="city" placeholder="Enter city name...">
+        <div class="search">
+            <input type="text" id="city" placeholder="Enter city name">
             <button id="searchBtn">Search</button>
         </div>
+
+        <div class="loader"></div>
+
         <div class="weather-info">
-            <h2 id="cityName"></h2>
+            <h2 id="city-name"></h2>
             <p id="temperature"></p>
-            <p id="description"></p>
             <p id="humidity"></p>
+            <p id="weather-description"></p>
         </div>
     </div>
+
+    <script defer src="project1.js"></script>
 </body>
 </html>
